@@ -195,13 +195,13 @@ class ToolOptions extends Component {
     }
   }
 
-  addLink(name, uri){
+  addLink(name, uri) {
 
-    const found = this.state.list.find((a)=> {
+    const found = this.state.list.find((a) => {
       return a.name === name || a.uri === uri
     });
 
-    if(found){
+    if (found) {
       return;
     }
 
@@ -220,8 +220,8 @@ class ToolOptions extends Component {
 
     const name = this.refs.link_name.value.trim();
     const uri = this.refs.link_url.value.trim();
-  
-    if(name === "" || uri === ""){
+
+    if (name === "" || uri === "") {
       return;
     }
 
@@ -251,9 +251,9 @@ class ToolOptions extends Component {
 
   renderLinks() {
 
-    if(this.state.list.length === 0){
+    if (this.state.list.length === 0) {
       return (<div>
-        <li>Inga länkar att visa. Lägg till egna eller använd exemplen ovan.</li>
+        <li>Inga länkar att visa. Add egna eller använd exemplen ovan.</li>
       </div>)
     }
 
@@ -273,7 +273,7 @@ class ToolOptions extends Component {
                   type="text"
                   defaultValue={t.name}
                   placeholder="Namn på länk"
-                  style={{width: "100%"}}
+                  style={{ width: "100%" }}
                 />
                 <br />
                 <input
@@ -281,7 +281,7 @@ class ToolOptions extends Component {
                   type="text"
                   defaultValue={t.uri}
                   placeholder="Url"
-                  style={{width: "100%"}}
+                  style={{ width: "100%" }}
                 />
                 <br />
                 <ColorButtonGreen
@@ -316,7 +316,7 @@ class ToolOptions extends Component {
             <span>{t.name}&nbsp;</span>
           )}
           <i
-            style={{float:"right"}}
+            style={{ float: "right" }}
             className={this.state.showResults ? "" : "fa fa-pencil link-icon"}
             onClick={() => this.editLink(t)}
           />
@@ -325,11 +325,11 @@ class ToolOptions extends Component {
     ));
   }
 
-  renderExamples(){
+  renderExamples() {
     return examples.map((item, i) => (
-      <div key={"example"+i}>
+      <div key={"example" + i}>
         {item.name}&nbsp;&nbsp;
-        <Button size="small" color="primary" onClick={() => this.addLink(item.name, item.uri)}>+ Lägg till</Button>
+        <Button size="small" color="primary" onClick={() => this.addLink(item.name, item.uri)}>+ Add</Button>
       </div>
     ))
   }
@@ -349,9 +349,9 @@ class ToolOptions extends Component {
       visibleForGroups: value !== "" ? groups : [],
     });
   }
-  
-  toggleExamples(){
-    this.setState({showExamples: !this.state.showExamples})
+
+  toggleExamples() {
+    this.setState({ showExamples: !this.state.showExamples })
   }
 
   renderVisibleForGroups() {
@@ -389,7 +389,7 @@ class ToolOptions extends Component {
               }}
               startIcon={<SaveIcon />}
             >
-              Spara
+              Save
             </ColorButtonBlue>
           </p>
           <div>
@@ -426,7 +426,7 @@ class ToolOptions extends Component {
           {this.renderVisibleForGroups()}
           <div>
             <div>
-              <h4>Lägg till länk</h4>
+              <h4>Add länk</h4>
               <div>
                 <label>Namn*</label>
                 <input
@@ -447,8 +447,8 @@ class ToolOptions extends Component {
                   ref="link_url"
                 />
               </div>
-              <div style={{display: "flex"}}>
-                <div style={{flex: "1 1 auto"}}>
+              <div style={{ display: "flex" }}>
+                <div style={{ flex: "1 1 auto" }}>
                   <ColorButtonGreen
                     variant="contained"
                     className="btn"
@@ -458,37 +458,37 @@ class ToolOptions extends Component {
                     }}
                     startIcon={<AddIcon />}
                   >
-                    Lägg till
+                    Add
                   </ColorButtonGreen>
                 </div>
-                <div style={{flex: "1 1 auto", textAlign: "right"}}>
-                  <Button size="small" color="primary" onClick={() => {this.toggleExamples()}}>{(this.state.showExamples ? "Dölj" : "Visa") + " exempel"}</Button>
+                <div style={{ flex: "1 1 auto", textAlign: "right" }}>
+                  <Button size="small" color="primary" onClick={() => { this.toggleExamples() }}>{(this.state.showExamples ? "Dölj" : "Visa") + " exempel"}</Button>
                 </div>
               </div>
               {
 
-                (this.state.showExamples === true ? 
-                  <div style={{display: "flex", backgroundColor: "#f7f7f7", borderRadius: 8, padding: "10px", marginTop: "4px", fontSize: "0.8rem"}}>
-                    <div style={{display: "flex", flex: "0 1 60%"}}>
-                      <code style={{fontSize: "0.8rem"}}>
-                        {"{x|EPSG:4326|4}"}<br/>
-                        <br/>                        
-                        x eller y = koordinat från kartan<br/>
-                        EPSG:4326 = konvertera till valfri projektion<br/>
-                        4 = antal decimaler (optional, default = 4)<br/>
+                (this.state.showExamples === true ?
+                  <div style={{ display: "flex", backgroundColor: "#f7f7f7", borderRadius: 8, padding: "10px", marginTop: "4px", fontSize: "0.8rem" }}>
+                    <div style={{ display: "flex", flex: "0 1 60%" }}>
+                      <code style={{ fontSize: "0.8rem" }}>
+                        {"{x|EPSG:4326|4}"}<br />
+                        <br />
+                        x eller y = koordinat från kartan<br />
+                        EPSG:4326 = konvertera till valfri projektion<br />
+                        4 = antal decimaler (optional, default = 4)<br />
                       </code>
                     </div>
-                    <div style={{display: "flex", flexFlow: "column", alignItems: "flex-end", flex: "0 1 40%"}}>
-                    {this.renderExamples()}
+                    <div style={{ display: "flex", flexFlow: "column", alignItems: "flex-end", flex: "0 1 40%" }}>
+                      {this.renderExamples()}
                     </div>
                   </div> : null)
-                
+
               }
             </div>
-            <br/>
+            <br />
             <h4>Länkar</h4>
             <div className="list-container">
-              <ul style={{paddingLeft: 0}}>{this.renderLinks()}</ul>
+              <ul style={{ paddingLeft: 0 }}>{this.renderLinks()}</ul>
             </div>
           </div>
         </form>

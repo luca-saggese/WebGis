@@ -97,7 +97,7 @@ export default function DrawOrderListItem({ changeOrder, layer }) {
   const getFriendlyTypeFromLayer = (layer) => {
     switch (layer.get("layerType")) {
       case "layer":
-        return "Lager";
+        return "Layer";
       case "group":
         return "Grupplager";
       case "base":

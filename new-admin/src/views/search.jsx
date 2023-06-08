@@ -63,8 +63,8 @@ const defaultState = {
   corfirm: false,
   alertMessage: "",
   content: "",
-  confirmAction: () => {},
-  denyAction: () => {},
+  confirmAction: () => { },
+  denyAction: () => { },
 };
 /**
  *
@@ -303,9 +303,9 @@ class Search extends Component {
       layers.forEach((layer) => {
         layer.caption.toLowerCase().indexOf(this.state.filter.toLowerCase()) ===
           0 ||
-        layer.internalLayerName
-          ?.toLowerCase()
-          .indexOf(this.state.filter.toLowerCase()) === 0
+          layer.internalLayerName
+            ?.toLowerCase()
+            .indexOf(this.state.filter.toLowerCase()) === 0
           ? startsWith.push(layer)
           : alphabetically.push(layer);
       });
@@ -727,7 +727,7 @@ class Search extends Component {
         <Alert options={this.getAlertOptions()} />
         <aside>
           <input
-            placeholder="filtrera"
+            placeholder="filter"
             type="text"
             onChange={(e) => this.filterLayers(e)}
           />
@@ -742,8 +742,8 @@ class Search extends Component {
             }}
           >
             <fieldset>
-              <legend>Lägg till WFS-tjänst</legend>
-              <div className="separator">Anslutning</div>
+              <legend>Add WFS-tjänst</legend>
+              <div className="separator">Connection</div>
               <div>
                 <label>Url*</label>
                 <input
@@ -793,7 +793,7 @@ class Search extends Component {
                 </select>
               </div>
               <div>
-                <label>Servertyp</label>
+                <label>Server type</label>
                 <select
                   ref="input_serverType"
                   value={this.state.serverType}
@@ -813,9 +813,9 @@ class Search extends Component {
                   <option value="mapserver">MapServer</option>
                 </select>
               </div>
-              <div className="separator">Tillgängliga lager</div>
+              <div className="separator">Available layers</div>
               <div>
-                <label>Lagerlista</label>
+                <label>Layer list</label>
                 {this.renderLayerList()}
               </div>
               <div className="separator">Hantera valt lager</div>
@@ -1005,7 +1005,7 @@ class Search extends Component {
                 type="submit"
                 startIcon={<SaveIcon />}
               >
-                Spara
+                Save
               </ColorButtonBlue>
             ) : (
               <ColorButtonGreen
@@ -1014,7 +1014,7 @@ class Search extends Component {
                 type="submit"
                 startIcon={<AddIcon />}
               >
-                Lägg till
+                Add
               </ColorButtonGreen>
             )}
             &nbsp;

@@ -240,16 +240,16 @@ class MapOptions extends Component {
 
   validate(callback) {
     var validationFields = [
-        "title",
-        "projection",
-        "zoom",
-        "maxZoom",
-        "minZoom",
-        "zoomDelta",
-        "zoomDuration",
-        "center",
-        "introductionSteps",
-      ],
+      "title",
+      "projection",
+      "zoom",
+      "maxZoom",
+      "minZoom",
+      "zoomDelta",
+      "zoomDuration",
+      "center",
+      "introductionSteps",
+    ],
       validationErrors = [];
 
     validationFields.forEach((field) => {
@@ -283,8 +283,8 @@ class MapOptions extends Component {
       return typeof v === "string"
         ? v.trim() === ""
         : Array.isArray(v)
-        ? v[0] === ""
-        : false;
+          ? v[0] === ""
+          : false;
     }
 
     function coord(v) {
@@ -512,7 +512,7 @@ class MapOptions extends Component {
               onClick={(e) => this.save(e)}
               startIcon={<SaveIcon />}
             >
-              Spara
+              Save
             </ColorButtonBlue>
             <br />
             <div>
@@ -1001,7 +1001,7 @@ class MapOptions extends Component {
                 value={this.state.zoomDuration}
                 className={
                   (this.getValidationClass("zoomDuration"),
-                  "control-fixed-width")
+                    "control-fixed-width")
                 }
                 onChange={(e) => {
                   this.setState({ zoomDuration: e.target.value }, () =>
@@ -1522,7 +1522,7 @@ class MapOptions extends Component {
               onClick={(e) => this.save(e)}
               startIcon={<SaveIcon />}
             >
-              Spara
+              Save
             </ColorButtonBlue>
             &nbsp;
           </fieldset>

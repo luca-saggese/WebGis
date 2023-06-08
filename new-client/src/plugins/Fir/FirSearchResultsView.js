@@ -203,8 +203,8 @@ class FirSearchResultsView extends React.PureComponent {
         a.get(sortProp) > b.get(sortProp)
           ? 1
           : b.get(sortProp) > a.get(sortProp)
-          ? -1
-          : 0
+            ? -1
+            : 0
       );
     }
 
@@ -406,7 +406,7 @@ class FirSearchResultsView extends React.PureComponent {
                 <StyledIconButton
                   disabled={this.state.removeFeatureByMapClickActive === true}
                   edge="end"
-                  title="Lägg till"
+                  title="Add"
                   color={
                     this.state.addFeatureByMapClickActive
                       ? "primary"
@@ -462,7 +462,7 @@ class FirSearchResultsView extends React.PureComponent {
                   </div>
                 ))}
                 {this.state.results.list.length === 0 &&
-                this.state.loading === false ? (
+                  this.state.loading === false ? (
                   <DivPaddedBottom>Inga resultat att visa</DivPaddedBottom>
                 ) : (
                   ""

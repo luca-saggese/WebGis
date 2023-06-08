@@ -394,7 +394,7 @@ class FirToolbarView extends React.PureComponent {
           <ContainerTopDoublePadded>
             <TextField
               fullWidth={true}
-              label="Lägg till buffer på sökområde"
+              label="Add buffer på sökområde"
               value={this.state.buffer}
               onKeyDown={(e) => {
                 return !isNaN(e.key);

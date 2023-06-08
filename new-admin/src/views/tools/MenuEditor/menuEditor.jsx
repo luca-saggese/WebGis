@@ -136,7 +136,7 @@ class ToolOptions extends Component {
       this.setState({
         textAreacolorpickerEnabled:
           tool.options.defaultDocumentColorSettings.textAreaBackgroundColor ||
-          tool.options.defaultDocumentColorSettings.textAreaDividerColor
+            tool.options.defaultDocumentColorSettings.textAreaDividerColor
             ? true
             : false,
         active: true,
@@ -364,7 +364,7 @@ class ToolOptions extends Component {
               onClick={this.onSaveMenuEditsClick}
               startIcon={<SaveIcon />}
             >
-              <Typography variant="button">Spara</Typography>
+              <Typography variant="button">Save</Typography>
             </ColorButtonBlue>
           </Grid>
           <Grid xs={1} item></Grid>
@@ -621,7 +621,7 @@ class ToolOptions extends Component {
               }}
               startIcon={<SaveIcon />}
             >
-              Spara
+              Save
             </ColorButtonBlue>
           </p>
           <div>

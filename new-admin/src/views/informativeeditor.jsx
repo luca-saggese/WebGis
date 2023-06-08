@@ -132,7 +132,7 @@ class InformativeEditor extends Component {
           showModal: true,
           modalContent: result,
           showAbortButton: false,
-          modalConfirmCallback: () => {},
+          modalConfirmCallback: () => { },
         });
       }
     );
@@ -186,7 +186,7 @@ class InformativeEditor extends Component {
       showModal: false,
       modalStyle: {},
       okButtonText: "OK",
-      modalConfirmCallback: () => {},
+      modalConfirmCallback: () => { },
     });
   }
 
@@ -485,12 +485,12 @@ class InformativeEditor extends Component {
         <div className="subChapters">
           {chapter.expanded
             ? chapter.chapters.map((innerChapter, innerIndex) => {
-                return this.renderChapter(
-                  chapter.chapters,
-                  innerChapter,
-                  innerIndex
-                );
-              })
+              return this.renderChapter(
+                chapter.chapters,
+                innerChapter,
+                innerIndex
+              );
+            })
             : null}
         </div>
       </div>
@@ -643,7 +643,7 @@ class InformativeEditor extends Component {
       showModal: true,
       showAbortButton: true,
       modalContent: this.renderCreateForm(),
-      okButtonText: "Spara",
+      okButtonText: "Save",
       modalConfirmCallback: () => {
         var data = {
           documentName: this.state.newDocumentName,
@@ -704,7 +704,7 @@ class InformativeEditor extends Component {
             onClick={() => this.save()}
             startIcon={<SaveIcon />}
           >
-            Spara
+            Save
           </ColorButtonBlue>
           &nbsp;
           <ChapterAdder onAddChapter={(title) => this.addChapter(title)} />

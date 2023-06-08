@@ -276,7 +276,7 @@ class EditView extends React.PureComponent {
                         color="primary"
                         onClick={this.onSaveClicked}
                       >
-                        Spara
+                        Save
                       </Button>
                     </Grid>
                   </>

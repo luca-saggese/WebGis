@@ -129,7 +129,7 @@ class ToolOptions extends Component {
         <p>
           <button className="btn btn-primary" onClick={() => this.save()}>
             <SaveIcon className="button-icon-vertical-align" />
-            Spara
+            Save
           </button>
         </p>
         <div>

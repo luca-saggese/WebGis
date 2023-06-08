@@ -6,7 +6,7 @@
     "done": "Klart!",
     "hide": "Dölj",
     "key": "Nyckel",
-    "layers": "Lager",
+    "layers": "Layer",
     "maximizeWindow": "Maximera fönstret",
     "minimizeWindow": "Minimera fönstret",
     "next": "Nästa",
@@ -169,7 +169,7 @@
           "maxWarning": "Maximalt antal sökträffar har uppnåtts. Förfina sökningen för att säkerställa att viktig information inte missas."
         },
         "feature": {
-          "addToSelection": "Lägg till i urval",
+          "addToSelection": "Add i urval",
           "removeFromSelection": "Ta bort från urval"
         },
         "featureDetails": {
@@ -322,7 +322,7 @@
           "numOfLayersRestored": "lager återställdes från tidigare session",
           "oneActiveLayer": "AKTIVT LAGER",
           "restoreSavedLayers": "Återställ sparade lager",
-          "saveActiveLayers": "Spara aktiva lager",
+          "saveActiveLayers": "Save aktiva lager",
           "systemLayers": "systemlager"
         },
         "appBar": {

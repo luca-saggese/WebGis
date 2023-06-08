@@ -9,9 +9,9 @@ import SettingsIcon from "@mui/icons-material/Settings";
 export const ACTIVITIES = [
   {
     id: "ADD",
-    tooltip: "Lägg till nya objekt.",
+    tooltip: "Add nya objekt.",
     information:
-      "Lägg till objekt genom att rita i kartan. Börja med att välja vilken typ av objekt du vill rita nedan.",
+      "Add objekt genom att rita i kartan. Börja med att välja vilken typ av objekt du vill rita nedan.",
     icon: <EditIcon />,
   },
   {
@@ -37,9 +37,9 @@ export const ACTIVITIES = [
   },
   {
     id: "SAVE",
-    tooltip: "Spara ritade objekt.",
+    tooltip: "Save ritade objekt.",
     information:
-      "Behöver du ta en paus? Spara det du har ritat och fortsätt senare. Tänk på att enbart de objekt som syns i kartan sparas.",
+      "Behöver du ta en paus? Save det du har ritat och fortsätt senare. Tänk på att enbart de objekt som syns i kartan sparas.",
     icon: <SaveIcon />,
   },
   {

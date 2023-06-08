@@ -326,10 +326,10 @@ class WMSLayerForm extends Component {
 
     let styles = layerInfo.styles
       ? layerInfo.styles.map((style, i) => (
-          <option key={`style_${style.Name}_${i}`} value={style.Name}>
-            {style.Name}
-          </option>
-        ))
+        <option key={`style_${style.Name}_${i}`} value={style.Name}>
+          {style.Name}
+        </option>
+      ))
       : null;
 
     return (
@@ -833,7 +833,7 @@ class WMSLayerForm extends Component {
                 this.addAllSublayers(opts);
               }}
             >
-              {"[Lägg till alla "}
+              {"[Add alla "}
               {opts?.children?.length}
               {" sublager separat]"}
             </a>
@@ -865,7 +865,7 @@ class WMSLayerForm extends Component {
                 onChange={(e) => {
                   this.appendLayer(e, layer.Name, opts);
                 }}
-                // disabled={parentGuid !== null} // When we get auto-selection of sublayers to work, we should disable manual checking on sublayer items
+              // disabled={parentGuid !== null} // When we get auto-selection of sublayers to work, we should disable manual checking on sublayer items
               />
               &nbsp;
               <label htmlFor={"layer" + guid}>{trueTitle}</label>
@@ -979,9 +979,9 @@ class WMSLayerForm extends Component {
             layer.customDpiList?.length > 0
               ? layer.customDpiList
               : [
-                  { pxRatio: 0, dpi: 90 },
-                  { pxRatio: 2, dpi: 180 },
-                ],
+                { pxRatio: 0, dpi: 90 },
+                { pxRatio: 2, dpi: 180 },
+              ],
         },
         () => {
           this.setServerType();
@@ -1108,12 +1108,12 @@ class WMSLayerForm extends Component {
 
     let imgFormats = imgs
       ? supportedImageFormats.map((imgFormat, i) => {
-          if (imgs.indexOf(imgFormat) > -1) {
-            return <option key={i}>{imgFormat}</option>;
-          } else {
-            return "";
-          }
-        })
+        if (imgs.indexOf(imgFormat) > -1) {
+          return <option key={i}>{imgFormat}</option>;
+        } else {
+          return "";
+        }
+      })
       : "";
 
     return imgFormats;
@@ -1154,12 +1154,12 @@ class WMSLayerForm extends Component {
 
     let projEles = projections
       ? supportedProjections.map((proj, i) => {
-          if (projections.indexOf(proj) > -1) {
-            return <option key={i}>{proj}</option>;
-          } else {
-            return "";
-          }
-        })
+        if (projections.indexOf(proj) > -1) {
+          return <option key={i}>{proj}</option>;
+        } else {
+          return "";
+        }
+      })
       : "";
 
     return projEles;
@@ -1179,12 +1179,12 @@ class WMSLayerForm extends Component {
 
     let formatEles = formats
       ? supportedInfoFormats.map((format, i) => {
-          if (formats.indexOf(format) > -1) {
-            return <option key={i}>{format}</option>;
-          } else {
-            return "";
-          }
-        })
+        if (formats.indexOf(format) > -1) {
+          return <option key={i}>{format}</option>;
+        } else {
+          return "";
+        }
+      })
       : "";
 
     return formatEles;
@@ -1385,8 +1385,8 @@ class WMSLayerForm extends Component {
       return typeof v === "string"
         ? v.trim() === ""
         : Array.isArray(v)
-        ? v[0] === ""
-        : false;
+          ? v[0] === ""
+          : false;
     }
 
     switch (fieldName) {
@@ -1512,9 +1512,9 @@ class WMSLayerForm extends Component {
     return (
       <fieldset>
         <legend>WMS-lager</legend>
-        <div className="separator">Anslutning</div>
+        <div className="separator">Connection</div>
         <div>
-          <label>Servertyp</label>
+          <label>Server type</label>
           <select
             className="control-fixed-width"
             ref="input_serverType"
@@ -1524,11 +1524,11 @@ class WMSLayerForm extends Component {
               if (
                 e.target.value === "geoserver"
                   ? (document.getElementById(
-                      "availableWorkspaces"
-                    ).style.display = "unset")
+                    "availableWorkspaces"
+                  ).style.display = "unset")
                   : (document.getElementById(
-                      "availableWorkspaces"
-                    ).style.display = "none")
+                    "availableWorkspaces"
+                  ).style.display = "none")
               );
             }}
           >
@@ -1572,7 +1572,7 @@ class WMSLayerForm extends Component {
         </div>
 
         <div id="availableWorkspaces">
-          <label>Välj workspace</label>
+          <label>Select workspace</label>
           <select
             className="control-fixed-width"
             ref="input_workspaceName"
@@ -1842,7 +1842,7 @@ class WMSLayerForm extends Component {
             />
           </label>
         </div>
-        <div className="separator">Tillgängliga lager</div>
+        <div className="separator">Available layers</div>
         <div>
           <table
             style={{

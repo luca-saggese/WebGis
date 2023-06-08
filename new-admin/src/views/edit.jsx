@@ -53,8 +53,8 @@ const defaultState = {
   corfirm: false,
   alertMessage: "",
   content: "",
-  confirmAction: () => {},
-  denyAction: () => {},
+  confirmAction: () => { },
+  denyAction: () => { },
 };
 /**
  *
@@ -547,8 +547,8 @@ class Edit extends Component {
         if (field.defaultValue && typeof field.defaultValue !== "string") {
           errors.push(
             field.name +
-              " default value is not a string. Was " +
-              typeof field.defaultValue
+            " default value is not a string. Was " +
+            typeof field.defaultValue
           );
         }
       } else if (field.dataType === "date") {
@@ -559,8 +559,8 @@ class Edit extends Component {
           } catch (error) {
             errors.push(
               field.name +
-                " default value is not a valid date. Was " +
-                field.defaultValue
+              " default value is not a valid date. Was " +
+              field.defaultValue
             );
           }
         }
@@ -572,8 +572,8 @@ class Edit extends Component {
           } catch (error) {
             errors.push(
               field.name +
-                " default value is not a valid date time. Was " +
-                field.defaultValue
+              " default value is not a valid date time. Was " +
+              field.defaultValue
             );
           }
         }
@@ -581,15 +581,15 @@ class Edit extends Component {
         if (field.defaultValue && isNaN(parseInt(field.defaultValue))) {
           errors.push(
             field.name +
-              " default value is not a integer. Value was " +
-              field.defaultValue
+            " default value is not a integer. Value was " +
+            field.defaultValue
           );
         } else if (field.localType === "Positiva heltal") {
           if (field.defaultValue && parseInt(field.defaultValue) <= 0) {
             errors.push(
               field.name +
-                " default value is not a positive number. Was " +
-                field.defaultValue
+              " default value is not a positive number. Was " +
+              field.defaultValue
             );
           }
         }
@@ -597,8 +597,8 @@ class Edit extends Component {
         if (field.defaultValue && isNaN(parseFloat(field.defaultValue))) {
           errors.push(
             field.name +
-              " default value is not a number. Value was " +
-              field.defaultValue
+            " default value is not a number. Value was " +
+            field.defaultValue
           );
         }
       } else if (field.dataType === "boolean") {
@@ -729,9 +729,9 @@ class Edit extends Component {
       layers.forEach((layer) => {
         layer.caption.toLowerCase().indexOf(this.state.filter.toLowerCase()) ===
           0 ||
-        layer.internalLayerName
-          ?.toLowerCase()
-          .indexOf(this.state.filter.toLowerCase()) === 0
+          layer.internalLayerName
+            ?.toLowerCase()
+            .indexOf(this.state.filter.toLowerCase()) === 0
           ? startsWith.push(layer)
           : alphabetically.push(layer);
       });
@@ -1187,7 +1187,7 @@ class Edit extends Component {
         <Alert options={this.getAlertOptions()} />
         <aside>
           <input
-            placeholder="filtrera"
+            placeholder="filter"
             type="text"
             onChange={(e) => this.filterLayers(e)}
           />
@@ -1202,8 +1202,8 @@ class Edit extends Component {
             }}
           >
             <fieldset>
-              <legend>Lägg till WFST-tjänst</legend>
-              <div className="separator">Anslutning</div>
+              <legend>Add WFST-tjänst</legend>
+              <div className="separator">Connection</div>
               <div>
                 <label>Url*</label>
                 <input
@@ -1248,9 +1248,9 @@ class Edit extends Component {
                   className={this.getValidationClass("uri")}
                 />
               </div>
-              <div className="separator">Tillgängliga lager</div>
+              <div className="separator">Available layers</div>
               <div>
-                <label>Lagerlista</label>
+                <label>Layer list</label>
                 {this.renderLayerList()}
               </div>
               <div className="separator">Hantera valt lager</div>
@@ -1423,7 +1423,7 @@ class Edit extends Component {
                 type="submit"
                 startIcon={<SaveIcon />}
               >
-                Spara
+                Save
               </ColorButtonBlue>
             ) : (
               <ColorButtonGreen
@@ -1432,7 +1432,7 @@ class Edit extends Component {
                 type="submit"
                 startIcon={<AddIcon />}
               >
-                Lägg till
+                Add
               </ColorButtonGreen>
             )}
             &nbsp;

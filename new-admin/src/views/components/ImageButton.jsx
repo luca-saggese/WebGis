@@ -125,7 +125,7 @@ class ImageButton extends Component {
             }}
             startIcon={<AddIcon />}
           >
-            Lägg till
+            Add
           </ColorButtonGreen>
         </div>
       );
@@ -146,7 +146,7 @@ class ImageButton extends Component {
       >
         <div className="modal-content">
           <div className="modal-header">
-            <h5 className="modal-title">Lägg till bild</h5>
+            <h5 className="modal-title">Add bild</h5>
             <button
               type="button"
               className="close"
@@ -162,18 +162,18 @@ class ImageButton extends Component {
             <select onChange={(e) => this.urlChanged(e)}>
               {imageList
                 ? imageList.map((image, i) => {
-                    return (
-                      //<option key={i} value={"/Upload/" + image}>
-                      <option
-                        key={i}
-                        type="text"
-                        name="url"
-                        value={"../Upload/" + image}
-                      >
-                        {image}
-                      </option>
-                    );
-                  })
+                  return (
+                    //<option key={i} value={"/Upload/" + image}>
+                    <option
+                      key={i}
+                      type="text"
+                      name="url"
+                      value={"../Upload/" + image}
+                    >
+                      {image}
+                    </option>
+                  );
+                })
                 : null}
             </select>
             <input

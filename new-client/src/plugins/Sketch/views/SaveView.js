@@ -201,7 +201,7 @@ const SketchSaver = (props) => {
                 disabled={saveButtonStateTest.disabled}
                 onClick={handleSaveSketchClick}
               >
-                {replaceWarning.show ? "Ersätt" : "Spara"}
+                {replaceWarning.show ? "Ersätt" : "Save"}
               </Button>
             </span>
           </Tooltip>

@@ -225,7 +225,7 @@ class ImageButton extends Component {
             }}
             startIcon={<AddIcon />}
           >
-            Lägg till
+            Add
           </ColorButtonGreen>
         </div>
       );
@@ -337,7 +337,7 @@ class RichEditor extends Component {
     );
   }
 
-  componentDidMount() {}
+  componentDidMount() { }
 
   getHtml() {
     const content = this.state.editorState.getCurrentContent();

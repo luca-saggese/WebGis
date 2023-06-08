@@ -25,8 +25,8 @@ var defaultState = {
   alertMessage: "",
   content: "",
   maps: [],
-  confirmAction: () => {},
-  denyAction: () => {},
+  confirmAction: () => { },
+  denyAction: () => { },
 };
 
 const ColorButtonRed = withStyles((theme) => ({
@@ -101,10 +101,10 @@ $.fn.editable = function (component) {
     }
 
     var btnCSS = {
-        marginLeft: "4px",
-        position: "relative",
-        top: "-1px",
-      },
+      marginLeft: "4px",
+      position: "relative",
+      top: "-1px",
+    },
       prev = node.html(),
       id = Math.floor(Math.random() * 1e5),
       id2 = Math.floor(Math.random() * 1e5),
@@ -674,21 +674,21 @@ class Menu extends Component {
       if (this.state.authActive) {
         root.dataset.type === "layer"
           ? settings.baselayers.push({
-              id: root.dataset.id,
-              visibleAtStart: checkIfTrue(root.dataset.visibleatstart),
-              drawOrder: 0,
-              visibleForGroups: visibleForGroups || [],
-              infobox: "",
-            })
+            id: root.dataset.id,
+            visibleAtStart: checkIfTrue(root.dataset.visibleatstart),
+            drawOrder: 0,
+            visibleForGroups: visibleForGroups || [],
+            infobox: "",
+          })
           : settings.groups.push(groupItem(root));
       } else {
         root.dataset.type === "layer"
           ? settings.baselayers.push({
-              id: root.dataset.id,
-              visibleAtStart: checkIfTrue(root.dataset.visibleatstart),
-              drawOrder: 0,
-              infobox: "",
-            })
+            id: root.dataset.id,
+            visibleAtStart: checkIfTrue(root.dataset.visibleatstart),
+            drawOrder: 0,
+            infobox: "",
+          })
           : settings.groups.push(groupItem(root));
       }
     });
@@ -839,7 +839,7 @@ class Menu extends Component {
         confirm: false,
         alertMessage:
           "Detta lager är redan tillagt i lagerlistan. Klicka på lagret i lagerlistan och därefter på den röda symbolen för att ta bort det.",
-        confirmAction: () => {},
+        confirmAction: () => { },
       });
       return;
     }
@@ -861,9 +861,9 @@ class Menu extends Component {
       layers.forEach((layer) => {
         layer.caption.toLowerCase().indexOf(this.state.filter.toLowerCase()) ===
           0 ||
-        layer.internalLayerName
-          ?.toLowerCase()
-          .indexOf(this.state.filter.toLowerCase()) === 0
+          layer.internalLayerName
+            ?.toLowerCase()
+            .indexOf(this.state.filter.toLowerCase()) === 0
           ? startsWith.push(layer)
           : alphabetically.push(layer);
       });
@@ -1338,7 +1338,7 @@ class Menu extends Component {
                 onClick={(e) => this.saveDrawOrder(e)}
                 startIcon={<SaveIcon />}
               >
-                Spara
+                Save
               </ColorButtonBlue>
               &nbsp;
               <ul>{this.renderDrawOrder()}</ul>
@@ -1348,7 +1348,7 @@ class Menu extends Component {
                 onClick={(e) => this.saveDrawOrder(e)}
                 startIcon={<SaveIcon />}
               >
-                Spara
+                Save
               </ColorButtonBlue>
             </fieldset>
           </article>
@@ -1360,7 +1360,7 @@ class Menu extends Component {
         <div>
           <aside>
             <input
-              placeholder="filtrera"
+              placeholder="filter"
               type="text"
               onChange={(e) => this.filterLayers(e)}
             />
@@ -1377,7 +1377,7 @@ class Menu extends Component {
                 onClick={(e) => this.saveSettings(e)}
                 startIcon={<SaveIcon />}
               >
-                Spara
+                Save
               </ColorButtonBlue>
               &nbsp;
               <div>
@@ -1676,7 +1676,7 @@ class Menu extends Component {
                   onClick={(e) => this.saveSettings(e)}
                   startIcon={<SaveIcon />}
                 >
-                  Spara
+                  Save
                 </ColorButtonBlue>
                 &nbsp;
                 <ColorButtonGreen
@@ -1696,7 +1696,7 @@ class Menu extends Component {
                   onClick={(e) => this.saveSettings(e)}
                   startIcon={<SaveIcon />}
                 >
-                  Spara
+                  Save
                 </ColorButtonBlue>
               </div>
             </fieldset>

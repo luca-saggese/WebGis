@@ -200,8 +200,8 @@ class WMTSLayerForm extends Component {
       return typeof v === "string"
         ? v.trim() === ""
         : Array.isArray(v)
-        ? v[0] === ""
-        : false;
+          ? v[0] === ""
+          : false;
     }
 
     switch (fieldName) {
@@ -284,7 +284,7 @@ class WMTSLayerForm extends Component {
           />
         </div>
         <div>
-          <label>Lager*</label>
+          <label>Layer*</label>
           <input
             type="text"
             ref="input_layer"

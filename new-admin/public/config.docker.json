@@ -12,8 +12,14 @@
     "url_vectorlayer_settings": "/api/v1/settings/vectorlayer",
     "url_default_server": "https://geoservertest.halmstad.se/geoserver/wms",
     "owner_options": [
-      { "value": "SBK", "title": "SBK" },
-      { "value": "Lantmäterienheten", "title": "Lantmäterienheten" }
+      {
+        "value": "SBK",
+        "title": "SBK"
+      },
+      {
+        "value": "Lantmäterienheten",
+        "title": "Lantmäterienheten"
+      }
     ]
   },
   "search": {
@@ -27,7 +33,11 @@
     "url_layers": "/api/v1/mapconfig/layers",
     "url_layer_settings": "/api/v1/settings/wfstlayer",
     "url_default_server": "https://giscloud.se/geoserver/wfs",
-    "projections": ["EPSG:3006", "EPSG:3007", "EPSG:3008"]
+    "projections": [
+      "EPSG:3006",
+      "EPSG:3007",
+      "EPSG:3008"
+    ]
   },
   "mapsettings": {
     "url_proxy": "",
@@ -53,7 +63,10 @@
     "url_save": "/api/v1/informative/save",
     "url_create": "/api/v1/informative/create",
     "url_delete": "/api/v1/informative/delete",
-    "default_coordinate": [320564, 6471766],
+    "default_coordinate": [
+      320564,
+      6471766
+    ],
     "wms_url": "http://giscloud.se/mapservice/lmproxy/wms/topowebb",
     "wms_layers": "topowebbkartan"
   },
@@ -75,7 +88,10 @@
     "url_save": "/api/v1/informative/save",
     "url_create": "/api/v1/informative/create",
     "url_delete": "/api/v1/informative/delete",
-    "default_coordinate": [320564, 6471766],
+    "default_coordinate": [
+      320564,
+      6471766
+    ],
     "wms_url": "http://giscloud.se/mapservice/lmproxy/wms/topowebb",
     "wms_layers": "topowebbkartan",
     "list_images": "/api/v1/mapconfig/listimage",
@@ -83,11 +99,30 @@
     "list_audio": "/api/v1/mapconfig/listaudio"
   },
   "router": [
-    { "name": "layermanager", "title": "Lager", "default": true },
-    { "name": "search", "title": "Söktjänster" },
-    { "name": "edit", "title": "Redigeringstjänster" },
-    { "name": "mapsettings", "title": "Kartor" },
-    { "name": "informative", "title": "Dokumenthanterare" },
-    { "name": "documenthandler", "title": "Dokumenthanterare 2.0" }
+    {
+      "name": "layermanager",
+      "title": "Layer",
+      "default": true
+    },
+    {
+      "name": "search",
+      "title": "Söktjänster"
+    },
+    {
+      "name": "edit",
+      "title": "Redigeringstjänster"
+    },
+    {
+      "name": "mapsettings",
+      "title": "Kartor"
+    },
+    {
+      "name": "informative",
+      "title": "Dokumenthanterare"
+    },
+    {
+      "name": "documenthandler",
+      "title": "Dokumenthanterare 2.0"
+    }
   ]
 }

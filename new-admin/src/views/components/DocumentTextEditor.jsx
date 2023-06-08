@@ -863,12 +863,12 @@ export default class DocumentTextEditor extends React.Component {
         <select onChange={this.onURLChange} ref="link">
           {documents
             ? documents.map((document, i) => {
-                return (
-                  <option key={i} type="text" name="document" value={document}>
-                    {document}
-                  </option>
-                );
-              })
+              return (
+                <option key={i} type="text" name="document" value={document}>
+                  {document}
+                </option>
+              );
+            })
             : null}
         </select>
       );
@@ -994,23 +994,23 @@ export default class DocumentTextEditor extends React.Component {
     if (type === "image")
       return imageList
         ? imageList.map((image, i) => {
-            const imageUrl = "../Upload/" + image;
-            return imageUrl;
-          })
+          const imageUrl = "../Upload/" + image;
+          return imageUrl;
+        })
         : null;
     if (type === "video")
       return videoList
         ? videoList.map((video, i) => {
-            const videoUrl = "../Upload/" + video;
-            return videoUrl;
-          })
+          const videoUrl = "../Upload/" + video;
+          return videoUrl;
+        })
         : null;
     if (type === "audio")
       return audioList
         ? audioList.map((audio, i) => {
-            const audioUrl = "../Upload/" + audio;
-            return audioUrl;
-          })
+          const audioUrl = "../Upload/" + audio;
+          return audioUrl;
+        })
         : null;
   };
 
@@ -1047,8 +1047,8 @@ export default class DocumentTextEditor extends React.Component {
         this.state.urlType === "image"
           ? "bild"
           : this.state.urlType === "video"
-          ? "video"
-          : "ljud";
+            ? "video"
+            : "ljud";
       const popupDisabled = this.state.urlType === "image" ? false : true;
       const widthHeightDisable = this.state.urlType === "audio" ? true : false;
 
@@ -1056,7 +1056,7 @@ export default class DocumentTextEditor extends React.Component {
         <Grid style={styles.gridItemContainer} container>
           <Grid container direction="column" spacing={2} item xs={6}>
             <Grid item>
-              <Typography variant="h5">Lägg till {addTextLocale}</Typography>
+              <Typography variant="h5">Add {addTextLocale}</Typography>
               <Autocomplete
                 id="disabled-options-demo"
                 freeSolo
@@ -1229,7 +1229,7 @@ export default class DocumentTextEditor extends React.Component {
         <Grid style={styles.gridItemContainer} direction="column" container>
           <Grid item>
             <Typography variant="h5">
-              Lägg till {this.getUrlType(this.state.urlType)}
+              Add {this.getUrlType(this.state.urlType)}
             </Typography>
           </Grid>
           <Grid item>
@@ -1283,17 +1283,17 @@ export default class DocumentTextEditor extends React.Component {
             />
 
             <StyleButton
-              tooltip="Lägg till en webblänk"
+              tooltip="Add en webblänk"
               label={<LaunchIcon />}
               onToggle={this.addWebLink}
             />
             <StyleButton
-              tooltip="Lägg till en dokumentlänk"
+              tooltip="Add en dokumentlänk"
               label={<DescriptionIcon />}
               onToggle={this.addDocumentLink}
             />
             <StyleButton
-              tooltip="Lägg till en kartlänk"
+              tooltip="Add en kartlänk"
               label={<MapIcon />}
               onToggle={this.addMapLink}
             />
@@ -1312,7 +1312,7 @@ export default class DocumentTextEditor extends React.Component {
             keyBindingFn={this.mapKeyToEditorCommand}
             onChange={this.onChange}
             onFocus={this.handleEditorClick}
-            placeholder="Lägg till text..."
+            placeholder="Add text..."
             ref="editor"
             readOnly={this.state.onReadOnly}
             plugins={this.plugins}
@@ -1328,13 +1328,13 @@ const TextStyleControls = (props) => {
     <div style={styles.buttons}>
       <StyleButton
         label={<FormatQuoteIcon />}
-        tooltip="Lägg till faktaruta"
+        tooltip="Add faktaruta"
         onToggle={props.onToggleQuote}
       />
 
       <StyleButton
         label={<TranslateIcon />}
-        tooltip="Lägg till en svävartext"
+        tooltip="Add en svävartext"
         onToggle={props.onToggleHover}
       />
     </div>
@@ -1345,19 +1345,19 @@ const MediaStyleControls = (props) => {
   return (
     <div style={styles.buttons}>
       <StyleButton
-        tooltip="Lägg till en bild"
+        tooltip="Add en bild"
         label={<ImageIcon />}
         onToggle={props.OnToggleImage}
       />
 
       <StyleButton
-        tooltip="Lägg till ett videoklipp"
+        tooltip="Add ett videoklipp"
         label={<MovieIcon />}
         onToggle={props.OnToggleVideo}
       />
 
       <StyleButton
-        tooltip="Lägg till ett ljudklipp"
+        tooltip="Add ett ljudklipp"
         label={<AudiotrackIcon />}
         onToggle={props.OnToggleAudio}
       />

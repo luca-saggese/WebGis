@@ -348,7 +348,7 @@ class SearchResultsContainer extends React.PureComponent {
         }}
         xs={12}
       >
-        <span style={visuallyHidden}>Textfält för att filtrera resultatet</span>
+        <span style={visuallyHidden}>Textfält för att filter resultatet</span>
         <TextField
           autoFocus
           onChange={this.handleFilterTextFieldInputChange}
@@ -409,8 +409,8 @@ class SearchResultsContainer extends React.PureComponent {
       // we are viewing _featureCollections_, and the featureCollection-
       // filter is set, the filter is active.
       !activeFeatureCollection && featureCollectionFilter.length > 0
-      ? true
-      : // Otherwise, the filter is not active.
+        ? true
+        : // Otherwise, the filter is not active.
         false;
   };
 
@@ -446,8 +446,8 @@ class SearchResultsContainer extends React.PureComponent {
       !sourceId || onSelectedFeaturesView
         ? []
         : [...this.state.selectedFeatures].filter((featureInfo) => {
-            return featureInfo.feature?.source.id !== sourceId;
-          });
+          return featureInfo.feature?.source.id !== sourceId;
+        });
     this.setState({
       selectedFeatures: selectedFeatures,
       activeFeatureCollection: onSelectedFeaturesView
@@ -536,22 +536,21 @@ class SearchResultsContainer extends React.PureComponent {
 
     const sortHelpText = `${t(
       "core.search.searchResults.tools.sort.toolTip"
-    )} ${
-      t(
-        // Get current sorting strategy from the array of strategies
-        this.sortingStrategies.find(
-          // by finding...
-          (strategy) =>
-            // the strategy with the "type"-value...
-            strategy.type ===
-            // corresponding to either the current feature or featureCollection
-            // sorting strategy (depending on if we have an active collection or not)
-            (activeFeatureCollection
-              ? featureSortingStrategy
-              : featureCollectionSortingStrategy)
-        ).name
-      ) // And it is the name property of the strategy we want send to the translator to get the
-    }`; // translated sort strategy.
+    )} ${t(
+      // Get current sorting strategy from the array of strategies
+      this.sortingStrategies.find(
+        // by finding...
+        (strategy) =>
+          // the strategy with the "type"-value...
+          strategy.type ===
+          // corresponding to either the current feature or featureCollection
+          // sorting strategy (depending on if we have an active collection or not)
+          (activeFeatureCollection
+            ? featureSortingStrategy
+            : featureCollectionSortingStrategy)
+      ).name
+    ) // And it is the name property of the strategy we want send to the translator to get the
+      }`; // translated sort strategy.
 
     return (
       <Tooltip disableInteractive title={sortHelpText}>
@@ -651,8 +650,7 @@ class SearchResultsContainer extends React.PureComponent {
             <Tooltip
               disableInteractive
               title={t(
-                `core.search.searchResults.tools.${
-                  this.state.showTools ? "toolTipOpened" : "toolTipClosed"
+                `core.search.searchResults.tools.${this.state.showTools ? "toolTipOpened" : "toolTipClosed"
                 }`
               )}
             >
@@ -779,7 +777,7 @@ class SearchResultsContainer extends React.PureComponent {
       const alreadyVisibleSubLayers = layer
         .getSource()
         .getParams()
-        ["LAYERS"].split(",")
+      ["LAYERS"].split(",")
         .filter((e) => e.length !== 0);
 
       // Next, prepare an array of the already visible layers, plus the new one.
@@ -1031,11 +1029,10 @@ class SearchResultsContainer extends React.PureComponent {
               noWrap
               sx={{ maxWidth: "100%", fontSize: 18 }}
             >
-              {`${
-                activeFeatureCollection
+              {`${activeFeatureCollection
                   ? featureCollectionTitle
                   : t("core.search.searchResults.headerTitle")
-              }`}
+                }`}
             </Typography>
           </Tooltip>
         </Grid>
@@ -1066,12 +1063,12 @@ class SearchResultsContainer extends React.PureComponent {
         sx={
           shouldRenderHeaderInfoBar
             ? {
-                minHeight: 42,
-                paddingRight: 1,
-                paddingLeft: 1,
-                borderBottom: 0.8,
-                borderBottomColor: "divider",
-              }
+              minHeight: 42,
+              paddingRight: 1,
+              paddingLeft: 1,
+              borderBottom: 0.8,
+              borderBottomColor: "divider",
+            }
             : { paddingRight: 1, paddingLeft: 1 }
         }
         container
@@ -1110,9 +1107,9 @@ class SearchResultsContainer extends React.PureComponent {
       // Do we have an active (selected) featureCollection?
       activeFeatureCollection
         ? // Return a array containing only that collection
-          [activeFeatureCollection]
+        [activeFeatureCollection]
         : // Otherwise we return all collections passing the filter
-          this.getFilteredFeatureCollections(this.props.featureCollections);
+        this.getFilteredFeatureCollections(this.props.featureCollections);
 
     const sortedFeatureCollections =
       this.sortFeatureCollections(featureCollections);
@@ -1123,8 +1120,8 @@ class SearchResultsContainer extends React.PureComponent {
     const collectionsToRender = activeFeatureCollection
       ? [activeFeatureCollection]
       : shouldRenderSelectedCollection
-      ? this.appendSelectedFeaturesCollection(sortedFeatureCollections)
-      : sortedFeatureCollections;
+        ? this.appendSelectedFeaturesCollection(sortedFeatureCollections)
+        : sortedFeatureCollections;
 
     return (
       <Collapse in={!panelCollapsed}>

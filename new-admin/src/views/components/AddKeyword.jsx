@@ -83,7 +83,7 @@ class AddKeyword extends Component {
       return (
         <div style={{ display: "inline-block" }}>
           <input
-            placeholder="Lägg till nyckelord"
+            placeholder="Add nyckelord"
             value={this.state.keyword}
             type="text"
             name="keyword-title"
@@ -121,7 +121,7 @@ class AddKeyword extends Component {
     } else {
       return (
         <div style={{ display: "inline-block" }}>
-          <Tooltip title="Lägg till ett nyckelord">
+          <Tooltip title="Add ett nyckelord">
             <IconButton
               size="small"
               onClick={() => this.toggleInputVisibility()}

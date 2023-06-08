@@ -231,7 +231,7 @@ class Toolbar extends Component {
                 this.onAddPointClicked();
               }}
               type="button"
-              title="Lägg till plats"
+              title="Add plats"
               style={this.getSelectedStyle("point")}
             >
               Plats
@@ -244,7 +244,7 @@ class Toolbar extends Component {
                 this.onAddLineClicked();
               }}
               type="button"
-              title="Lägg till sträcka"
+              title="Add sträcka"
               style={this.getSelectedStyle("linestring")}
             >
               Sträcka
@@ -257,7 +257,7 @@ class Toolbar extends Component {
                 this.onAddPolygonClicked();
               }}
               type="button"
-              title="Lägg till område"
+              title="Add område"
               style={this.getSelectedStyle("polygon")}
             >
               Område

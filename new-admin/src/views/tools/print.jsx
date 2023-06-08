@@ -354,7 +354,7 @@ class ToolOptions extends Component {
               }}
               startIcon={<SaveIcon />}
             >
-              Spara
+              Save
             </ColorButtonBlue>
           </p>
           <div className="information-box">

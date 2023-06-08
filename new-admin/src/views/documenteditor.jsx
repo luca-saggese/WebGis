@@ -245,7 +245,7 @@ class DocumentEditor extends Component {
           modalTitle: result,
           modalContent: "",
           showAbortButton: false,
-          modalConfirmCallback: () => {},
+          modalConfirmCallback: () => { },
         });
       }
     );
@@ -300,7 +300,7 @@ class DocumentEditor extends Component {
       showModal: false,
       modalStyle: {},
       okButtonText: "OK",
-      modalConfirmCallback: () => {},
+      modalConfirmCallback: () => { },
     });
   }
 
@@ -607,20 +607,20 @@ class DocumentEditor extends Component {
           <Typography className={classes.gridItem}>Nyckelord</Typography>
           {chapter.keywords
             ? chapter.keywords.map((keyword, i) => (
-                <Chip
-                  key={i}
-                  label={keyword}
-                  onDelete={(i) => {
-                    const index = chapter.keywords.indexOf(keyword);
-                    if (index > -1) {
-                      chapter.keywords.splice(index, 1);
-                    }
-                    this.setState({
-                      keywords: chapter.keywords,
-                    });
-                  }}
-                />
-              ))
+              <Chip
+                key={i}
+                label={keyword}
+                onDelete={(i) => {
+                  const index = chapter.keywords.indexOf(keyword);
+                  if (index > -1) {
+                    chapter.keywords.splice(index, 1);
+                  }
+                  this.setState({
+                    keywords: chapter.keywords,
+                  });
+                }}
+              />
+            ))
             : null}
           <Grid item>
             <AddKeyword
@@ -661,13 +661,13 @@ class DocumentEditor extends Component {
         >
           {chapter.expanded
             ? chapter.chapters.map((innerChapter, innerIndex) => {
-                return this.renderChapter(
-                  chapter.chapters,
-                  innerChapter,
-                  innerIndex,
-                  false
-                );
-              })
+              return this.renderChapter(
+                chapter.chapters,
+                innerChapter,
+                innerIndex,
+                false
+              );
+            })
             : null}
         </Grid>
       </Grid>
@@ -821,7 +821,7 @@ class DocumentEditor extends Component {
       showAbortButton: true,
       modalTitle: "Skapa nytt dokument",
       modalContent: this.renderCreateForm(),
-      okButtonText: "Spara",
+      okButtonText: "Save",
       modalConfirmCallback: () => {
         var data = {
           documentName: this.state.newDocumentName,
@@ -861,7 +861,7 @@ class DocumentEditor extends Component {
       modalContent: this.renderTableOfContentsInput(),
       showAbortButton: true,
 
-      modalConfirmCallback: () => {},
+      modalConfirmCallback: () => { },
     });
   }
 
@@ -1034,7 +1034,7 @@ class DocumentEditor extends Component {
                   onClick={() => this.save()}
                   startIcon={<SaveIcon />}
                 >
-                  Spara
+                  Save
                 </ColorButtonBlue>
               </Grid>
             )}
@@ -1059,7 +1059,7 @@ class DocumentEditor extends Component {
         {selectedDocument && (
           <Grid className={classes.addHeadChapterButton} container item>
             <DocumentChapter
-              buttonCaption={"Lägg till huvudkapitel"}
+              buttonCaption={"Add huvudkapitel"}
               onAddChapter={(title, titleID) => this.addChapter(title, titleID)}
             />
           </Grid>

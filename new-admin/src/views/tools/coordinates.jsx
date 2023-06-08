@@ -321,7 +321,7 @@ class ToolOptions extends Component {
               }}
               startIcon={<SaveIcon />}
             >
-              Spara
+              Save
             </ColorButtonBlue>
           </p>
           <div>
@@ -554,7 +554,7 @@ class ToolOptions extends Component {
                 type="submit"
                 startIcon={<AddIcon />}
               >
-                Lägg till
+                Add
               </ColorButtonGreen>
             </form>
           </div>

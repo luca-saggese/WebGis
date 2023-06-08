@@ -245,7 +245,7 @@ class BookmarksView extends React.PureComponent {
             startIcon={this.state.error ? null : <AddCircleOutlineIcon />}
             onClick={this.btnAddBookmark}
           >
-            {this.state.error ? "Ersätt" : "Lägg till"}
+            {this.state.error ? "Ersätt" : "Add"}
           </AddButton>
         </Box>
 

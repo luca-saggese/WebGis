@@ -85,7 +85,7 @@ class FieldAdder extends Component {
             className="btn btn-default"
             onClick={this.addValue}
           >
-            Lägg till värde
+            Add värde
           </span>
         </div>
       </div>
@@ -166,7 +166,7 @@ class FieldEditor extends Component {
       showModal: false,
       modalStyle: {},
       okButtonText: "OK",
-      modalConfirmCallback: () => {},
+      modalConfirmCallback: () => { },
     });
   }
 
@@ -285,7 +285,7 @@ class FieldEditor extends Component {
           onClick={this.addPage}
           startIcon={<AddIcon />}
         >
-          Lägg till ny sida
+          Add ny sida
         </ColorButtonGreen>
 
         <div className="pages">{this.renderPages()}</div>

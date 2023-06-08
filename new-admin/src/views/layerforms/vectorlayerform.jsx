@@ -226,8 +226,8 @@ class VectorLayerForm extends React.Component {
       return typeof v === "string"
         ? v.trim() === ""
         : Array.isArray(v)
-        ? v[0] === ""
-        : false;
+          ? v[0] === ""
+          : false;
     }
 
     switch (fieldName) {
@@ -514,7 +514,7 @@ class VectorLayerForm extends React.Component {
     return (
       <fieldset>
         <legend>Vektorlager</legend>
-        <div className="separator">Anslutning</div>
+        <div className="separator">Connection</div>
         <div>
           <label>
             Dataformat (
@@ -590,9 +590,9 @@ class VectorLayerForm extends React.Component {
             Ladda {loader}
           </span>
         </div>
-        <div className="separator">Tillgängliga lager</div>
+        <div className="separator">Available layers</div>
         <div>
-          <label>Lagerlista</label>
+          <label>Layer list</label>
           {this.renderLayerList()}
         </div>
         <div className="separator">Hantera valda lager</div>
@@ -1077,7 +1077,7 @@ class VectorLayerForm extends React.Component {
           />
           &nbsp;
           <label htmlFor="filterable">
-            Tillåt användaren att filtrera features{" "}
+            Tillåt användaren att filter features{" "}
             <abbr title="Ger användaren möjlighet att via Lagerhanteraren styra vilka features som visas.">
               ?
             </abbr>

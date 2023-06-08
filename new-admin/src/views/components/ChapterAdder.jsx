@@ -123,7 +123,7 @@ class ChapterAdder extends Component {
             onClick={() => this.toggleInputVisibility()}
             startIcon={<AddIcon />}
           >
-            Lägg till kapitel
+            Add kapitel
           </ColorButtonGreen>
         </div>
       );

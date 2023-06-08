@@ -189,8 +189,8 @@ class ArcGISLayerForm extends Component {
       return typeof v === "string"
         ? v.trim() === ""
         : Array.isArray(v)
-        ? v[0] === ""
-        : false;
+          ? v[0] === ""
+          : false;
     }
 
     function array(v) {
@@ -324,7 +324,7 @@ class ArcGISLayerForm extends Component {
       var append = (layer) => {
         var classNames =
           this.props.parent.state.layerPropertiesLayer ===
-          layer.name + "_" + layer.id
+            layer.name + "_" + layer.id
             ? "fa fa-info-circle active"
             : "fa fa-info-circle";
 
@@ -405,7 +405,7 @@ class ArcGISLayerForm extends Component {
     return (
       <fieldset>
         <legend>ArcGIS MapServer-lager</legend>
-        <div className="separator">Anslutning</div>
+        <div className="separator">Connection</div>
         <div>
           <label>Url*</label>
           <input
@@ -470,9 +470,9 @@ class ArcGISLayerForm extends Component {
           &nbsp;
           <label>Single tile</label>
         </div>
-        <div className="separator">Tillgängliga lager</div>
+        <div className="separator">Available layers</div>
         <div>
-          <label>Lagerlista</label>
+          <label>Layer list</label>
           {this.renderLayerList()}
         </div>
         <div className="separator">Hantera valda lager</div>

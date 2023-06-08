@@ -285,7 +285,7 @@ class LayerItem extends React.PureComponent {
       this.state.status === "loaderror" && (
         <Tooltip
           disableInteractive
-          title="Lagret kunde inte laddas in. Kartservern svarar inte."
+          title="The layer could not be loaded. The map server is not responding."
         >
           <LayerButtonWrapper>
             <IconWarning />
@@ -634,8 +634,8 @@ class LayerItem extends React.PureComponent {
         <div>
           {this.renderDetails()}
           {this.state.toggleSettings &&
-          this.state.infoVisible &&
-          !this.isInfoEmpty() ? (
+            this.state.infoVisible &&
+            !this.isInfoEmpty() ? (
             <hr />
           ) : null}
           {layer.isFakeMapLayer ? null : (

@@ -62,7 +62,7 @@ const TextAreaInput = ({ editorState, updateEditorState, onCancelClick }) => {
       <Grid alignItems="center" container spacing={2} item xs={7}>
         <Grid direction="column" container item>
           <Grid item>
-            <Typography variant="h5">Lägg till faktaruta</Typography>
+            <Typography variant="h5">Add faktaruta</Typography>
           </Grid>
           <Grid item>
             <Typography variant="body1">

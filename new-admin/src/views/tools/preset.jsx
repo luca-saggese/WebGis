@@ -361,7 +361,7 @@ class ToolOptions extends Component {
               }}
               startIcon={<SaveIcon />}
             >
-              Spara
+              Save
             </ColorButtonBlue>
           </p>
           <div>
@@ -514,7 +514,7 @@ class ToolOptions extends Component {
           {this.renderVisibleForGroups()}
           <div>
             <div>
-              <h4>Lägg till snabbval</h4>
+              <h4>Add snabbval</h4>
               <div>
                 <label>Namn*</label>
                 <input
@@ -544,7 +544,7 @@ class ToolOptions extends Component {
                 }}
                 startIcon={<AddIcon />}
               >
-                Lägg till
+                Add
               </ColorButtonGreen>
             </div>
             <h4>Lista över aktiva snabbval</h4>

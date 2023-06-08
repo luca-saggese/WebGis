@@ -600,8 +600,8 @@ class ToolOptions extends Component {
   selectedSourceChange = (id, checked) => (e) => {
     var selectedSources = checked
       ? this.state.selectedSources.filter(
-          (selectedSource) => selectedSource !== id
-        )
+        (selectedSource) => selectedSource !== id
+      )
       : [id, ...this.state.selectedSources];
 
     this.setState({
@@ -664,7 +664,7 @@ class ToolOptions extends Component {
               }}
               startIcon={<SaveIcon />}
             >
-              Spara
+              Save
             </ColorButtonBlue>
           </p>
           <div>
@@ -792,7 +792,7 @@ class ToolOptions extends Component {
             <label htmlFor="searchLayers">
               Välj vilka WMS-lager som ska vara tillgängliga som söktjänster.
               Kom ihåg att konfigurera respektive WMS-lagers sökinställningar i
-              Lager-fliken!
+              Layer-fliken!
             </label>
             <div className="layer-list">
               {this.renderSources(this.state.sources)}

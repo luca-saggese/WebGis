@@ -12,8 +12,14 @@
     "url_vectorlayer_settings": "https://YOUR_DOMAIN.COM/mapservice/settings/vectorlayer",
     "url_default_server": "https://YOUR_MAP_SERVER.COM/geoserver/wms",
     "owner_options": [
-      { "value": "SBK", "title": "SBK" },
-      { "value": "Lantmäterienheten", "title": "Lantmäterienheten" }
+      {
+        "value": "SBK",
+        "title": "SBK"
+      },
+      {
+        "value": "Lantmäterienheten",
+        "title": "Lantmäterienheten"
+      }
     ]
   },
   "search": {
@@ -27,7 +33,11 @@
     "url_layers": "https://YOUR_DOMAIN.COM/mapservice/config/layers",
     "url_layer_settings": "https://YOUR_DOMAIN.COM/mapservice/settings/wfstlayer",
     "url_default_server": "https://YOUR_MAP_SERVER.COM/geoserver/wfs",
-    "projections": ["EPSG:3006", "EPSG:3007", "EPSG:3008"]
+    "projections": [
+      "EPSG:3006",
+      "EPSG:3007",
+      "EPSG:3008"
+    ]
   },
   "mapsettings": {
     "url_proxy": "https://YOUR_DOMAIN.COM/util/proxy/geturl/",
@@ -52,14 +62,33 @@
     "url_save": "https://YOUR_DOMAIN.COM/mapservice/informative/save",
     "url_create": "https://YOUR_DOMAIN.COM/mapservice/informative/create",
     "url_delete": "https://YOUR_DOMAIN.COM/mapservice/informative/delete",
-    "default_coordinate": [320564, 6471766],
+    "default_coordinate": [
+      320564,
+      6471766
+    ],
     "wmtsUrl": "http://giscloud.se/mapservice/lmproxy/wmts"
   },
   "router": [
-    { "name": "layermanager", "title": "Lager", "default": true },
-    { "name": "search", "title": "Söktjänster" },
-    { "name": "edit", "title": "Redigeringstjänster" },
-    { "name": "mapsettings", "title": "Kartor" },
-    { "name": "informative", "title": "Dokumenthanterare" }
+    {
+      "name": "layermanager",
+      "title": "Layer",
+      "default": true
+    },
+    {
+      "name": "search",
+      "title": "Söktjänster"
+    },
+    {
+      "name": "edit",
+      "title": "Redigeringstjänster"
+    },
+    {
+      "name": "mapsettings",
+      "title": "Kartor"
+    },
+    {
+      "name": "informative",
+      "title": "Dokumenthanterare"
+    }
   ]
 }

@@ -633,7 +633,7 @@ class ToolOptions extends Component {
                         >
                           {!productGroups.includes(product.group) && (
                             <Tooltip
-                              title={`Gruppen som produkten tillhör verkar vara raderad... Produkten kommer inte synas i Hajk. Lägg till en grupp (${product.group}) för att åtgärda felet`}
+                              title={`Gruppen som produkten tillhör verkar vara raderad... Produkten kommer inte synas i Hajk. Add en grupp (${product.group}) för att åtgärda felet`}
                             >
                               <WarningIcon color="secondary" />
                             </Tooltip>
@@ -658,7 +658,7 @@ class ToolOptions extends Component {
               })
             ) : (
               <Typography>
-                Just nu finns det inga aktiva produkter. Lägg till den första!
+                Just nu finns det inga aktiva produkter. Add den första!
               </Typography>
             )}
           </Grid>
@@ -672,7 +672,7 @@ class ToolOptions extends Component {
       <Grid container style={{ marginBottom: 16 }}>
         <Paper elevation={6} style={{ padding: 16 }}>
           <Grid item xs={12} style={{ marginBottom: 8 }}>
-            <Typography variant="button">Lägg till ny produkt:</Typography>
+            <Typography variant="button">Add ny produkt:</Typography>
           </Grid>
           {this.renderCreateProductForm()}
         </Paper>
@@ -887,7 +887,7 @@ class ToolOptions extends Component {
             onClick={this.handleAddNewProduct}
             variant="contained"
           >
-            Lägg till
+            Add
           </Button>
         </Grid>
       </Grid>
@@ -943,7 +943,7 @@ class ToolOptions extends Component {
               }}
               startIcon={<SaveIcon />}
             >
-              Spara
+              Save
             </ColorButtonBlue>
           </p>
           <div>
@@ -1226,7 +1226,7 @@ class ToolOptions extends Component {
                     onClick={this.handleAddNewGroupClick}
                     variant="contained"
                   >
-                    Lägg till grupp
+                    Add grupp
                   </Button>
                 </Grid>
               </Grid>

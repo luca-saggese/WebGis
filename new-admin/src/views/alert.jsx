@@ -97,7 +97,7 @@ class LayerAlert extends Component {
                 onClick={(e) => this._onSaveClick(e)}
                 startIcon={<SaveIcon />}
               >
-                Spara
+                Save
               </ColorButtonBlue>
             </div>
           </div>

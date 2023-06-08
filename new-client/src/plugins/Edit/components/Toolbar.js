@@ -117,7 +117,7 @@ class Toolbar extends Component {
     return (
       <Grid container spacing={1}>
         <Grid item xs={12}>
-          <Typography>Lägg till</Typography>
+          <Typography>Add</Typography>
         </Grid>
         <Grid item xs={4}>
           <StyledButton
@@ -129,7 +129,7 @@ class Toolbar extends Component {
             }}
             selected={this.props.activeTool === "point"}
             type="button"
-            title="Lägg till punkt"
+            title="Add punkt"
           >
             Punkt
             <ScatterPlotIcon sx={{ marginLeft: 1 }} />
@@ -144,7 +144,7 @@ class Toolbar extends Component {
               this.onAddLineClicked();
             }}
             type="button"
-            title="Lägg till linje"
+            title="Add linje"
             selected={this.props.activeTool === "linestring"}
           >
             Linje
@@ -160,7 +160,7 @@ class Toolbar extends Component {
               this.onAddPolygonClicked();
             }}
             type="button"
-            title="Lägg till yta"
+            title="Add yta"
             selected={this.props.activeTool === "polygon"}
           >
             Yta

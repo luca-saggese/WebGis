@@ -51,8 +51,8 @@ const defaultState = {
   confirm: false,
   alertMessage: "",
   content: "",
-  confirmAction: () => {},
-  denyAction: () => {},
+  confirmAction: () => { },
+  denyAction: () => { },
 };
 
 class Manager extends Component {
@@ -121,9 +121,8 @@ class Manager extends Component {
     if (matchedConfigs.length < 1) {
       alertMessage = `Lagret "${layer.caption}" används inte i någon karta.`;
     } else {
-      alertMessage = `Lagret "${
-        layer.caption
-      }" används i följande kartor: ${matchedConfigs.join(", ")}`;
+      alertMessage = `Lagret "${layer.caption
+        }" används i följande kartor: ${matchedConfigs.join(", ")}`;
     }
 
     this.setState({
@@ -481,9 +480,9 @@ class Manager extends Component {
       layers.forEach((layer) => {
         layer.caption.toLowerCase().indexOf(this.state.filter.toLowerCase()) ===
           0 ||
-        layer.internalLayerName
-          ?.toLowerCase()
-          .indexOf(this.state.filter.toLowerCase()) === 0
+          layer.internalLayerName
+            ?.toLowerCase()
+            .indexOf(this.state.filter.toLowerCase()) === 0
           ? startsWith.push(layer)
           : alphabetically.push(layer);
       });
@@ -737,16 +736,16 @@ class Manager extends Component {
 
   render() {
     var abort =
-        this.state.mode === "edit" ? (
-          <ColorButtonRed
-            variant="contained"
-            className="btn btn-danger"
-            onClick={(e) => this.abort(e)}
-            startIcon={<CancelIcon />}
-          >
-            Avbryt
-          </ColorButtonRed>
-        ) : null,
+      this.state.mode === "edit" ? (
+        <ColorButtonRed
+          variant="contained"
+          className="btn btn-danger"
+          onClick={(e) => this.abort(e)}
+          startIcon={<CancelIcon />}
+        >
+          Avbryt
+        </ColorButtonRed>
+      ) : null,
       url = this.props.config.url_import, // "/mapservice/export/importimage"
       typeSelectorDisabled = this.state.mode === "edit";
 
@@ -755,7 +754,7 @@ class Manager extends Component {
         <Alert options={this.getAlertOptions()} />
         <aside>
           <input
-            placeholder="filtrera"
+            placeholder="filter"
             type="text"
             onChange={(e) => this.filterLayers(e)}
           />
@@ -815,7 +814,7 @@ class Manager extends Component {
             }}
           >
             <p>
-              <label>Välj lagertyp</label>
+              <label>Select stock type</label>
               <select
                 disabled={typeSelectorDisabled}
                 value={this.state.layerType}
@@ -837,7 +836,7 @@ class Manager extends Component {
                 type="submit"
                 startIcon={<SaveIcon />}
               >
-                Spara
+                Save
               </ColorButtonBlue>
             ) : (
               <ColorButtonGreen
@@ -846,7 +845,7 @@ class Manager extends Component {
                 type="submit"
                 startIcon={<AddIcon />}
               >
-                Lägg till
+                Add
               </ColorButtonGreen>
             )}
             &nbsp;
@@ -859,7 +858,7 @@ class Manager extends Component {
                 type="submit"
                 startIcon={<SaveIcon />}
               >
-                Spara
+                Save
               </ColorButtonBlue>
             ) : (
               <ColorButtonGreen
@@ -868,7 +867,7 @@ class Manager extends Component {
                 type="submit"
                 startIcon={<AddIcon />}
               >
-                Lägg till
+                Add
               </ColorButtonGreen>
             )}
             &nbsp;

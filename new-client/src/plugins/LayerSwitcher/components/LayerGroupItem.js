@@ -157,7 +157,7 @@ class LayerGroupItem extends Component {
       this.state.status === "loaderror" && (
         <Tooltip
           disableInteractive
-          title="Lagret kunde inte laddas in. Kartservern svarar inte."
+          title="The layer could not be loaded. The map server is not responding."
         >
           <SummaryButtonWrapper>
             <IconWarning />

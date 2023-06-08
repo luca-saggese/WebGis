@@ -13720,7 +13720,7 @@
                             },
                             className: "btn btn-primary",
                           },
-                          "Spara"
+                          "Save"
                         )
                       )
                     )
@@ -35033,7 +35033,7 @@
                     "aside",
                     null,
                     l.a.createElement("input", {
-                      placeholder: "filtrera",
+                      placeholder: "filter",
                       type: "text",
                       onChange: function (e) {
                         return t.filterLayers(e);
@@ -35138,7 +35138,7 @@
                         l.a.createElement(
                           "div",
                           null,
-                          l.a.createElement("label", null, "Lagerlista"),
+                          l.a.createElement("label", null, "Layer list"),
                           this.renderLayerList()
                         ),
                         l.a.createElement(
@@ -35226,7 +35226,7 @@
                       l.a.createElement(
                         "button",
                         { className: "btn btn-primary" },
-                        "edit" === this.state.mode ? "Spara" : "L\xe4gg till"
+                        "edit" === this.state.mode ? "Save" : "L\xe4gg till"
                       ),
                       "\xa0",
                       n
@@ -35929,7 +35929,7 @@
                     "aside",
                     null,
                     s.a.createElement("input", {
-                      placeholder: "filtrera",
+                      placeholder: "filter",
                       type: "text",
                       onChange: function (e) {
                         return t.filterLayers(e);
@@ -36019,7 +36019,7 @@
                       s.a.createElement(
                         "button",
                         { className: "btn btn-primary" },
-                        "edit" === this.state.mode ? "Spara" : "L\xe4gg till"
+                        "edit" === this.state.mode ? "Save" : "L\xe4gg till"
                       ),
                       "\xa0",
                       e
@@ -36629,7 +36629,7 @@
                   l.a.createElement(
                     "div",
                     null,
-                    l.a.createElement("label", null, "Lagerlista"),
+                    l.a.createElement("label", null, "Layer list"),
                     this.renderLayerList()
                   ),
                   l.a.createElement(
@@ -36677,7 +36677,7 @@
                   l.a.createElement(
                     "div",
                     null,
-                    l.a.createElement("label", null, "Servertyp"),
+                    l.a.createElement("label", null, "Server type"),
                     l.a.createElement(
                       "select",
                       {
@@ -37707,7 +37707,7 @@
                     l.a.createElement(
                       "label",
                       { className: "col-md-5" },
-                      "Lagerlista"
+                      "Layer list"
                     ),
                     l.a.createElement(
                       "label",
@@ -38443,7 +38443,7 @@
                   l.a.createElement(
                     "div",
                     null,
-                    l.a.createElement("label", null, "Lager*"),
+                    l.a.createElement("label", null, "Layer*"),
                     l.a.createElement("input", {
                       type: "text",
                       ref: "input_layer",
@@ -39370,7 +39370,7 @@
                   l.a.createElement(
                     "div",
                     null,
-                    l.a.createElement("label", null, "Lagerlista"),
+                    l.a.createElement("label", null, "Layer list"),
                     this.renderLayerList()
                   ),
                   l.a.createElement(
@@ -40179,7 +40179,7 @@
                   l.a.createElement(
                     "div",
                     null,
-                    l.a.createElement("label", null, "Lagerlista"),
+                    l.a.createElement("label", null, "Layer list"),
                     this.renderLayerList()
                   ),
                   l.a.createElement(
@@ -48416,7 +48416,7 @@
                           return t.save();
                         },
                       },
-                      "Spara"
+                      "Save"
                     ),
                     "\xa0",
                     s.a.createElement(p.a, {
@@ -68205,7 +68205,7 @@
                               return t.saveDrawOrder(e);
                             },
                           },
-                          "Spara"
+                          "Save"
                         ),
                         "\xa0",
                         l.a.createElement("ul", null, this.renderDrawOrder())
@@ -68220,7 +68220,7 @@
                       "aside",
                       null,
                       l.a.createElement("input", {
-                        placeholder: "filtrera",
+                        placeholder: "filter",
                         type: "text",
                         onChange: function (e) {
                           return t.filterLayers(e);
@@ -68247,7 +68247,7 @@
                               return t.saveSettings(e);
                             },
                           },
-                          "Spara"
+                          "Save"
                         ),
                         "\xa0",
                         l.a.createElement(
@@ -68913,7 +68913,7 @@
                             return t.save(e);
                           },
                         },
-                        "Spara"
+                        "Save"
                       ),
                       l.a.createElement("br", null),
                       l.a.createElement(
@@ -69144,7 +69144,7 @@
                             return t.save(e);
                           },
                         },
-                        "Spara"
+                        "Save"
                       ),
                       "\xa0"
                     )
@@ -69729,7 +69729,7 @@
                             e.preventDefault(), t.save();
                           },
                         },
-                        "Spara"
+                        "Save"
                       )
                     ),
                     l.a.createElement(
@@ -70071,7 +70071,7 @@
                             e.preventDefault(), t.save();
                           },
                         },
-                        "Spara"
+                        "Save"
                       )
                     ),
                     l.a.createElement(
@@ -70471,7 +70471,7 @@
                             e.preventDefault(), t.save();
                           },
                         },
-                        "Spara"
+                        "Save"
                       )
                     ),
                     l.a.createElement(
@@ -70911,7 +70911,7 @@
                           return t.save();
                         },
                       },
-                      "Spara"
+                      "Save"
                     )
                   ),
                   l.a.createElement(
@@ -71334,7 +71334,7 @@
                             e.preventDefault(), t.save();
                           },
                         },
-                        "Spara"
+                        "Save"
                       )
                     ),
                     l.a.createElement(
@@ -71743,7 +71743,7 @@
                             e.preventDefault(), t.save();
                           },
                         },
-                        "Spara"
+                        "Save"
                       )
                     ),
                     l.a.createElement(
@@ -72088,7 +72088,7 @@
                             e.preventDefault(), t.save();
                           },
                         },
-                        "Spara"
+                        "Save"
                       )
                     ),
                     l.a.createElement(
@@ -72550,7 +72550,7 @@
                             e.preventDefault(), t.save();
                           },
                         },
-                        "Spara"
+                        "Save"
                       )
                     ),
                     l.a.createElement(
@@ -72984,7 +72984,7 @@
                             e.preventDefault(), t.save();
                           },
                         },
-                        "Spara"
+                        "Save"
                       )
                     ),
                     l.a.createElement(
@@ -73375,7 +73375,7 @@
                             e.preventDefault(), t.save();
                           },
                         },
-                        "Spara"
+                        "Save"
                       )
                     ),
                     l.a.createElement(
@@ -73671,7 +73671,7 @@
                             e.preventDefault(), t.save();
                           },
                         },
-                        "Spara"
+                        "Save"
                       )
                     ),
                     l.a.createElement(
@@ -74161,7 +74161,7 @@
                             e.preventDefault(), t.save();
                           },
                         },
-                        "Spara"
+                        "Save"
                       )
                     ),
                     u.a.createElement(
@@ -74911,7 +74911,7 @@
                             e.preventDefault(), t.save();
                           },
                         },
-                        "Spara"
+                        "Save"
                       )
                     ),
                     l.a.createElement(
@@ -75272,7 +75272,7 @@
                     u.a.createElement("br", null),
                     u.a.createElement("input", {
                       type: "submit",
-                      value: "Spara",
+                      value: "Save",
                       onSubmit: function (t) {
                         t.preventDefault(), e.handleSubmit(t);
                       },
@@ -75434,7 +75434,7 @@
                                   return t.editPreset(e, e.name, e.presetUrl);
                                 },
                               },
-                              "Spara"
+                              "Save"
                             ),
                             u.a.createElement(
                               "button",
@@ -75530,7 +75530,7 @@
                             e.preventDefault(), t.save();
                           },
                         },
-                        "Spara"
+                        "Save"
                       )
                     ),
                     u.a.createElement(
@@ -75865,7 +75865,7 @@
                             e.preventDefault(), t.save();
                           },
                         },
-                        "Spara"
+                        "Save"
                       )
                     ),
                     l.a.createElement(
@@ -76189,7 +76189,7 @@
                             e.preventDefault(), t.save();
                           },
                         },
-                        "Spara"
+                        "Save"
                       )
                     ),
                     l.a.createElement(
@@ -77327,7 +77327,7 @@
                     "aside",
                     null,
                     l.a.createElement("input", {
-                      placeholder: "filtrera",
+                      placeholder: "filter",
                       type: "text",
                       onChange: function (e) {
                         return t.filterLayers(e);
@@ -77427,7 +77427,7 @@
                         l.a.createElement(
                           "div",
                           null,
-                          l.a.createElement("label", null, "Lagerlista"),
+                          l.a.createElement("label", null, "Layer list"),
                           this.renderLayerList()
                         ),
                         l.a.createElement(
@@ -77545,7 +77545,7 @@
                       l.a.createElement(
                         "button",
                         { className: "btn btn-primary" },
-                        "edit" === this.state.mode ? "Spara" : "L\xe4gg till"
+                        "edit" === this.state.mode ? "Save" : "L\xe4gg till"
                       ),
                       "\xa0",
                       n

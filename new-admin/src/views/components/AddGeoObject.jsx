@@ -82,7 +82,7 @@ class AddGeoObject extends Component {
       return (
         <div style={{ display: "inline-block" }}>
           <input
-            placeholder="Lägg till geo-objekt"
+            placeholder="Add geo-objekt"
             value={this.state.geoObject}
             type="text"
             name="geo-object-title"
@@ -120,7 +120,7 @@ class AddGeoObject extends Component {
     } else {
       return (
         <div style={{ display: "inline-block" }}>
-          <Tooltip title="Lägg till ett geoobjekt">
+          <Tooltip title="Add ett geoobjekt">
             <IconButton
               size="small"
               onClick={() => this.toggleInputVisibility()}

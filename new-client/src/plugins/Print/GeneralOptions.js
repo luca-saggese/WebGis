@@ -281,7 +281,7 @@ class GeneralOptions extends React.PureComponent {
           </StyledFormControl>
           <StyledFormControl>
             <InputLabel variant="standard" htmlFor="saveAsType">
-              Spara som
+              Save som
             </InputLabel>
             {this.renderSaveAsTypeSelector()}
           </StyledFormControl>
